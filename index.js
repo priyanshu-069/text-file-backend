@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const path = require('path');
 const fs = require('fs');
 const { log } = require('console');
@@ -51,7 +51,6 @@ app.post('/edit' , (req,res) =>{
     })
 });
 
-app.listen(port , ()=>{
-    // console.error(err.message);
-    console.log(`listening to the port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
