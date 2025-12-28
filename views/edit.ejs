@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        form{
+            display: grid;
+            margin-top: 3rem;
+            margin-left: 4rem;
+            width: 10rem;
+        }
+        .input-div{
+            text-align: start;
+        }
+        .create{
+            background-color: rgb(157, 64, 64);
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" style="color: rgb(0, 198, 132); display: inline-block; margin-top: 1rem; margin-left: 1rem;">go back to home</a>
+    <form action="/edit" method="post">
+                <input class="title-block" type="text" placeholder="Previous Name" name="previous" value="<%= filename %>">
+                <input class="title-block" type="text" placeholder="New Name" name="new">
+                <div class="input-div">
+                    <input class="create" type="submit" value="Create Task">
+                </div>
+            </form>
+</body>
+</html>
